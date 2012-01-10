@@ -4,3 +4,7 @@ It requires the following:
 express
 ntwitter
 socket.io
+
+TODO:
+Seperate client code into a template in a seperate file
+Add ability to limit number of tweets shown on page
