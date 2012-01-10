@@ -1,0 +1,6 @@
+This is a simple server that accesses tweets on http://localhost/stream/search_term_here
+
+It requires the following:
+express
+ntwitter
+socket.io
