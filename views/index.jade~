@@ -1,0 +1,16 @@
+!!! 5
+html
+	head
+		title Twitter Node Server
+	body
+		h3 Incoming Tweets about #{term}
+		h4 Tweet Limit: 
+			input#tweet_limit(type='text', size=2, value=5)
+			button#lim_button change
+		ul#tweets
+		script(src='/socket.io/socket.io.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script(src='/client.js')
+		script
+			app('#{term}');
+

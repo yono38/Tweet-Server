@@ -23,7 +23,7 @@ app.set('view options', {
 
 app.get('/client.js', function(req, res){
 	res.sendfile('client.js');
-});
+}
 
 app.get('/stream/:term', function(req, res) {
 // This is the code served by the page. It emits an event when it loads to 

@@ -1,0 +1,16 @@
+!!! 5
+html
+	head
+		title Twitter Node Server
+	body
+		h3 Incoming Tweets about #{term}
+		ul#tweets
+		script(src='/socket.io/socket.io.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script
+			var socket = io.connect('http://localhost/');							
+			socket.emit('page_load', { topic: '" + req.params.term + "' });	
+			socket.on('tweet', function (data) {										
+				console.log(data); 
+				$('#tweets').append('<li>'+data.data.text+'</li>');												
+			});		
