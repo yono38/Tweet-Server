@@ -13,6 +13,8 @@ Use twitter search API to create initial seed tweets (also can choose number of 
 
 Version 1.1
 Added Jade templating
+Added Tweet limiting
+Seperated client javascript from server javascript
 
 Version 1.0
 Initial Commit

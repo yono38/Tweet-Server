@@ -6,10 +6,7 @@ ntwitter
 socket.io
 
 TODO:
-Add ability to limit number of tweets shown on page
 Use twitter search API to create initial seed tweets (also can choose number of seeds, maybe 5?)
-
-
 
 Version 1.1
 Added Jade templating
