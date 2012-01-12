@@ -3,10 +3,14 @@ html
 	head
 		title Twitter Node Server
 	body
-		h3 Incoming Tweets about #{term}
+		h1 Incoming Tweets about #{term}
 		h4 Tweet Limit: 
 			input#tweet_limit(type='text', size=2, value=15)
 			button#lim_button change
+		div#artist_tweet_box(style="color:red;border-style:solid;border-width:5px;display:none")
+			h2 Latest Tweets by #{term}
+			ul#artist_tweets
+		h2 What People Are Tweeting about #{term}
 		ul#tweets
 		script(src='/socket.io/socket.io.js')
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')

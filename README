@@ -1,12 +1,18 @@
 This is a simple server that accesses tweets on http://localhost/stream/search_term_here
 
 It requires the following:
+jade
 express
 ntwitter
 socket.io
 
 TODO:
-Use twitter search API to create initial seed tweets (also can choose number of seeds, maybe 5?)
+Add node logger
+Make package.json for npm
+
+Version 1.2
+Allowed connection to echonest to get verified twitter accounts
+Pulls in tweets from verified accounts
 
 Version 1.1
 Added Jade templating
