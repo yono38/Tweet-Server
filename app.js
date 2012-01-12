@@ -43,6 +43,7 @@ io.sockets.on('connection', function (socket) {
   console.log("PAGE LOADED +++++++++++++++++++++++++++++++++++ "+url_data.topic);
   
   if (config.use_echonest){
+  	// replaces spaces in the search term with +'s for the API urls
   	var topic_term = url_data.topic.replace(/\s/g, '+');
   	console.log('topic term: '+topic_term);
   	echonest(topic_term, config, socket);
@@ -78,7 +79,7 @@ function echonest(term, config, socket){
 		// parse the response when it finishes
 		  body = JSON.parse(body)
 			// if a twitter username is returned
-			if (typeof(body.response.artist.foreign_ids) != "undefined"){
+			if (body.response.status.code ==0 && typeof(body.response.artist.foreign_ids) != "undefined"){
 			//	console.log(body.response.artist.foreign_ids[0].foreign_id);
 				// slice out the username from the json
 				name = body.response.artist.foreign_ids[0].foreign_id.split(':').slice(-1)[0];
