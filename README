@@ -8,7 +8,6 @@ socket.io
 
 TODO:
 Add node logger
-Make package.json for npm
 
 Version 1.2
 Allowed connection to echonest to get verified twitter accounts
