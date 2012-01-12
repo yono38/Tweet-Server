@@ -43,7 +43,7 @@ io.sockets.on('connection', function (socket) {
   console.log("PAGE LOADED +++++++++++++++++++++++++++++++++++ "+url_data.topic);
   
   if (config.use_echonest){
-  	var topic_term = url_data.topic.replace(' ', '+');
+  	var topic_term = url_data.topic.replace(/\s/g, '+');
   	console.log('topic term: '+topic_term);
   	echonest(topic_term, config, socket);
   }
